@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="">
+    我是pay
   </div>
 </template>
 
 <script>
 export default {
+  name: 'payIndex',
   data () {
-    return {
-    }
+    return {}
   }
 }
 </script>
 
-<style>
+<style scoped>
 </style>

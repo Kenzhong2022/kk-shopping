@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="">
+    我是myorder
   </div>
 </template>
 
 <script>
 export default {
+  name: 'myorderIndex',
   data () {
-    return {
-    }
+    return {}
   }
 }
 </script>
 
-<style>
+<style scoped>
 </style>
