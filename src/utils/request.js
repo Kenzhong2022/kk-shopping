@@ -1,8 +1,19 @@
 import store from '@/store'
 import axios from 'axios'
 import { Toast } from 'vant'
+
+// 根据环境使用不同的API地址
+const getBaseURL = () => {
+  if (process.env.NODE_ENV === 'production') {
+    // 生产环境，确保使用HTTPS
+    return 'https://smart-shop.itheima.net/index.php?s=/api'
+  }
+  // 开发环境
+  return 'http://smart-shop.itheima.net/index.php?s=/api'
+}
+
 const instance = axios.create({
-  baseURL: 'http://smart-shop.itheima.net/index.php?s=/api',
+  baseURL: getBaseURL(),
   timeout: 5000,
   headers: { platform: 'H5' }
 })
